@@ -6,7 +6,7 @@ async function main() {
 
   await storage.deployed();
 
-  console.log("Contract Deployed at: ", storage.address);
+  console.log("Contract Deployed at:", storage.address);
 }
 
 main().catch((error) => {
