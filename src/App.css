@@ -1,0 +1,244 @@
+/* body{
+    background-image: url(../src/assets/galaxy.gif);
+} */
+
+/* Navbar */
+nav {
+    background-color: #3e187a;
+    background-image: linear-gradient(316deg, #3e187a 0%, #994ecc 74%);
+    padding: .5rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border-radius: 5px;
+}
+
+.nav-name {
+    padding: 5px;
+    height: 2.5rem;
+    width: 7.5rem;
+    display: flex;
+    justify-content: center;
+}
+
+.nav-name span {
+    font-size: 2rem;
+    font-weight: 500;
+}
+
+.nav-name span a {
+    text-decoration: none;
+    color: #efefef;
+}
+
+.nav-name span a:hover {
+    cursor: pointer;
+    color: #3e187a;
+}
+
+.nav-links {
+    display: flex;
+    width: 30%;
+}
+
+.nav-links ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    list-style: none;
+}
+
+.nav-links ul li a {
+    text-decoration: none;
+    color: #efefef;
+    font-weight: 400;
+    font-size: large;
+}
+
+.nav-links ul li a:hover {
+    color: #87ceeb;
+}
+
+.launch-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 8rem;
+}
+
+.launch-btn button {
+    border-radius: 10px;
+    width: 7.5rem;
+    height: 2.75rem;
+    background-color: #efefef;
+    color: #994ecc;
+    font-weight: 550;
+}
+
+.launch-btn button:hover {
+    cursor: pointer;
+    color: #efefef;
+    background: #994ecc;
+}
+
+/* Home */
+home {
+    width: 100%;
+    height: 450px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding: 7.5rem 0;
+}
+
+.home-left {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+    justify-content: center;
+}
+
+.home-left-top {
+    padding: 0.5rem;
+    width: 90%;
+}
+
+.home-left-top span {
+    color: #994ecc;
+    font-size: 3.5rem;
+}
+
+.home-left-middle {
+    padding: 0.5rem;
+    width: 75%;
+}
+
+.home-left-middle span {
+    font-size: 1.2rem;
+}
+
+.home-left-bottom {
+    padding: 0.5rem;
+}
+
+.home-right {
+    display: flex;
+    align-items: center;
+}
+
+
+/* User */
+.user {
+    padding: 3rem;
+    display: flex;
+    justify-content: center;
+}
+
+.users {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    border-radius: 10px;
+    padding-top: 1rem;
+    background-color: #3e187a;
+    background-image: linear-gradient(316deg, #3e187a 0%, #994ecc 74%);
+}
+
+.users span {
+    font-size: 1.5rem;
+    font-weight: 400;
+    align-self: center;
+    color: #efefef
+}
+
+.user-img {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 1rem;
+}
+
+.user-img img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+.users-img {
+    padding: 0.5rem;
+    display: flex;
+    flex-direction: row;
+}
+
+.users-img span {
+    font-weight: 500;
+    margin-left: 0.5rem;
+}
+
+.users-img span:hover {
+    cursor: pointer;
+}
+
+/* About */
+.about {
+    width: 100%;
+    height: 450px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding: 7.5rem 0;
+}
+
+.about-right {
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+    justify-content: center;
+}
+
+.about-right-top {
+    padding: 0.5rem;
+    width: 90%;
+}
+
+.about-right-top span {
+    color: #87ceeb;
+    font-size: 3.5rem;
+}
+
+.about-right-middle {
+    padding: 0.5rem;
+    width: 85%;
+}
+
+.about-right-middle span {
+    font-size: 1.25rem;
+    font-weight: 600;
+}
+
+.about-right-bottom {
+    padding: 0.5rem;
+    width: 80%;
+}
+
+.about-right-bottom span {
+    font-size: 1.15rem;
+    line-height: 1.5rem;
+}
+
+.about-left {
+    display: flex;
+    align-items: center;
+}
+
+.about-left img {
+    width: 600px;
+    height: 400px;
+}
+
+/* Features */

@@ -1,4 +1,4 @@
-# DigiVault: A decentralized file storage and sharing solution.
+# Stackup: A decentralized file storage and sharing solution.
 
 ## Tech Stack:
 
