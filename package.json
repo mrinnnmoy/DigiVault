@@ -41,6 +41,7 @@
   },
   "devDependencies": {
     "@nomicfoundation/hardhat-toolbox": "^2.0.0",
-    "hardhat": "^2.18.0"
+    "hardhat": "^2.18.0",
+    "react-router-dom": "^6.16.0"
   }
 }
