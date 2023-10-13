@@ -5,6 +5,7 @@ const FileUpload = ({ contract, account, provider }) => {
 
   const [file, setFile] = useState(null);
   const [fileName, setFileName] = useState("No image selected");
+  const [selectedImage, setSelectedImage] = useState(null);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -39,7 +40,20 @@ const FileUpload = ({ contract, account, provider }) => {
   };
 
   const retrieveFile = (e) => {
-    const data = e.target.files[0]; //files array of files object
+    // View selected image
+    const file = e.target.files[0];
+    if (file) {
+      const reader = new FileReader();
+      reader.onload = (event) => {
+        setSelectedImage(event.target.result);
+      };
+      reader.readAsDataURL(file);
+    } else {
+      setSelectedImage(null);
+    }
+
+    //files array of files object
+    const data = e.target.files[0];
     // console.log(data);
     const reader = new window.FileReader();
     reader.readAsArrayBuffer(data);
@@ -51,32 +65,34 @@ const FileUpload = ({ contract, account, provider }) => {
   };
 
   return (
-      <div className="upload-top">
-        <p>Account: {account ? account : "Not Connected"}</p>
-        <form className="form" onSubmit={handleSubmit}>
-          <label htmlFor="file-upload" className="choose">
-            Upload Image:
-          </label>
-          <div className="upload-img">
-            {/* Enter the box to preview image here */}
-            <div className="img-info">
-              <input
-                disabled={!account}
-                type="file"
-                id="file-upload"
-                name="data"
-                onChange={retrieveFile}
-              />
-              <span className="textArea">Image: {fileName}</span>
-            </div>
+    <div className="upload-top">
+      <p>Account: {account ? account : "Not Connected"}</p>
+      <form className="form" onSubmit={handleSubmit}>
+        <label htmlFor="file-upload" className="choose">
+          Upload Image:
+        </label>
+        <div className="upload-img">
+          {selectedImage && (
+            <img src={selectedImage} className="preview-img" alt="Selected-img" />
+          )}
+          <div className="img-info">
+            <input
+              disabled={!account}
+              type="file"
+              id="file-upload"
+              name="data"
+              onChange={retrieveFile}
+            />
+            <span className="textArea">Image: {fileName}</span>
           </div>
-          <div className="upload-button">
-            <button type="submit" disabled={!file}>
-              Upload
-            </button>
-          </div>
-        </form>
-      </div>
+        </div>
+        <div className="upload-button">
+          <button type="submit" disabled={!file}>
+            Upload
+          </button>
+        </div>
+      </form>
+    </div>
   );
 };
 
