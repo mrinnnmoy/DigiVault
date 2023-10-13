@@ -8,9 +8,8 @@ import About from './components/About';
 import Features from './components/Features';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
+
 import Dashboard from './pages/Dashboard';
-import Upload from './pages/Upload';
-import Share from './pages/Share';
 
 function App() {
   return (
@@ -23,8 +22,6 @@ function App() {
           <Route path="/features" element={<Features />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/dashboard" element={<Dashboard />} />
-          <Route path="/upload" element={<Upload />} />
-          <Route path="/share" element={<Share />} />
         </Routes>
       </BrowserRouter>
       <Footer />

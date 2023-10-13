@@ -473,7 +473,7 @@ footer {
     flex-direction: column;
     align-items: center;
     width: 75%;
-    height: 150px;
+    height: 170px;
     justify-content: center;
 }
 
@@ -507,4 +507,161 @@ footer {
 
 .copyright {
     color: gray;
+}
+
+/* Style CSS for Dashboard */
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2.5rem;
+}
+
+.head {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 2px solid gray;
+    background-color: #3e187a;
+    background-image: linear-gradient(316deg, #3e187a 0%, #994ecc 74%);
+    border-radius: 10px;
+}
+
+ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 70%;
+    list-style: none;
+    padding: 1.5rem;
+    margin: 0;
+}
+
+ul a {
+    text-decoration: none;
+    font-size: 20px;
+    color: #efefef;
+}
+
+ul a:hover {
+    color: #3e187a;
+}
+
+/* FileUpload */
+
+.upload {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 2rem;
+}
+
+.upload-main {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+    border: 2px solid gray;
+    border-radius: 0 20px 0 20px;
+}
+
+.upload-main form {
+    display: flex;
+    flex-direction: column;
+    border: 2px solid #994ecc;
+    border-radius: 5px;
+    padding: 1rem;
+    margin-bottom: 1rem;
+}
+
+.upload-main form label {
+    font-size: 20px;
+    font-weight: 500;
+    padding-bottom: 1rem;
+}
+
+.upload-main form .upload-img {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+}
+
+.img-info {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    line-height: 1.5rem;
+
+}
+
+.upload-button {
+    margin: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.upload-button button {
+    width: 20%;
+    padding: .5rem;
+    color: #efefef;
+    font-size: 15px;
+    font-weight: 500;
+    background-color: #994ecc;
+    border: 2px solid gray;
+    border-radius: 7.5px;
+}
+
+.upload-button button:hover {
+    cursor: pointer;
+    background-color: #efefef;
+    color: #994ecc;
+}
+
+/* Display */
+.view {
+    border: 2px solid #994ecc;
+    border-radius: 5px;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.view label {
+    font-size: 20px;
+    font-weight: 500;
+    padding-bottom: 1rem;
+}
+
+.view-info {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: .75rem;
+}
+
+.view-info input {
+    padding: .5rem;
+    border: 2px solid gray;
+    border-radius: 5px;
+    margin-right: 1rem;
+}
+
+.view-button {
+    width: 20%;
+    padding: .5rem;
+    color: #efefef;
+    font-size: 15px;
+    font-weight: 500;
+    background-color: #994ecc;
+    border: 2px solid gray;
+    border-radius: 7.5px;
+}
+
+.view-button:hover {
+    cursor: pointer;
+    background-color: #efefef;
+    color: #994ecc;
 }
