@@ -2,11 +2,8 @@
 
 A De-centralized File Storage and sharing solution.
 
-- User Interaction
-
 - Upload & View your important documents to and from IPFS via Pinata.
-- Share those documents among selected peers.
-- View list of Accounts, you shared access to.
+- Share those documents among selected peers and View list of Accounts.
 - View images that were shared with you.
 
 ## Demo Image
@@ -42,20 +39,6 @@ A De-centralized File Storage and sharing solution.
 - test: Contains test sripts for the testing the smart contract.
 - src: Contains the front-end application.
 
-## Page Setup:
-
-<ol>
-    <li>A home page for the app, showing all the features, problem statement, solution and details along with step to use the app.</li>
-    <li>A dashboard for users to connect their metamask, upload images and show images uploaded using that address.</li>
-    <li>A share image page to share an image with other users.</li>
-    <li>A view image page to show all the images that are shared with the metamask account connected.</li>
-</ol>
-
-## Contributions to this repo are WELCOME ⚡👋
-
-- :art: Any improvements to the design and UI are welcome.
-- :hammer: try to break the website by testing it to find any bugs. If you find any, check if there is an issue already open for it, if there is none, then report it.
-
 ## Tools, Languages and Frameworks used
 
 - React JS
@@ -65,6 +48,11 @@ A De-centralized File Storage and sharing solution.
 - Solidity
 - Hardhat
 - Alchemy
+
+## Contributions to this repo are WELCOME ⚡👋
+
+- :art: Any improvements to the design and UI are welcome.
+- :hammer: try to break the website by testing it to find any bugs. If you find any, check if there is an issue already open for it, if there is none, then report it.
 
 ## Steps to be followed in order to make valid contributions to this repo 🍀
 
