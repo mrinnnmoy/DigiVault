@@ -56,11 +56,11 @@ A De-centralized File Storage and sharing solution.
 
 ## Steps to be followed in order to make valid contributions to this repo 🍀
 
-**1.** Fork the [contactbook](https://github.com/mrinnnmoy/contactbook) repo by clicking on the fork button on the top of the page. This will create a copy of this repository in your account.
+**1.** Fork the [StackUp](https://github.com/mrinnnmoy/Stackup) repo by clicking on the fork button on the top of the page. This will create a copy of this repository in your account.
 
 **2.** Clone the forked repository
 
-        git clone "https://github.com/<your-github-username>/contactbook"
+        git clone "https://github.com/<your-github-username>/Stackup"
 
 - Download and install Node JS v16.16.0
 - Download and install Git.
