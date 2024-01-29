@@ -8,7 +8,7 @@ const Display = ({ contract, account }) => {
     try {
       if (Otheraddress) {
         dataArray = await contract.display(Otheraddress);
-        console.log(dataArray);
+        // console.log(dataArray);
       } else {
         dataArray = await contract.display(account);
       }
@@ -21,8 +21,8 @@ const Display = ({ contract, account }) => {
       const str = dataArray.toString();
       const str_array = str.split(",");
 
-      console.log(str);
-      console.log(str_array);
+      // console.log(str);
+      // console.log(str_array);
 
       const images = str_array.map((item, i) => {
         return (
