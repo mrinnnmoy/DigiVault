@@ -4,6 +4,7 @@ import axios from 'axios';
 const FileUpload = ({ contract, account, provider }) => {
   const [file, setFile] = useState(null);
   const [fileName, setFileName] = useState("No Image Selected");
+  const [previewUrl, setPreviewUrl] = useState(null);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -26,8 +27,9 @@ const FileUpload = ({ contract, account, provider }) => {
         const ImgHash = `https://gateway.pinata.cloud/ipfs/${resFile.data.IpfsHash}`;
         contract.add(account, ImgHash);
         alert("Successfully Image Uploaded.");
-        setFile(null);
         setFileName("No Image Selected");
+        setFile(null);
+        setPreviewUrl(null);
       } catch (error) {
         alert("Unable to Upload Image.");
       }
@@ -35,27 +37,36 @@ const FileUpload = ({ contract, account, provider }) => {
   };
 
   const retrieveFile = (e) => {
-    const data = e.target.files[0];
+    const selectedFile = e.target.files[0];
     // console.log(data);
-
-    const reader = new window.FileReader();
-    reader.readAsArrayBuffer(data);
-    reader.onloadend = () => {
-      setFile(e.target.files[0]);
-    };
-    setFileName(e.target.files[0].name);
-    e.preventDefault();
-  }
+    if (selectedFile) {
+      const reader = new window.FileReader();
+      reader.onloadend = () => {
+        setFile(selectedFile);
+        setFileName(selectedFile.name);
+        setPreviewUrl(reader.result);
+      };
+      reader.readAsDataURL(selectedFile);
+    }
+  };
 
   return (
-    <div className=''>
-      <form className='' onSubmit={handleSubmit}>
-        <label htmlFor="file-upload" className=''>
-          Choose Image
-        </label>
-        <input disabled={!account} type="file" name="data" id="file-upload" onChange={retrieveFile} />
-        <span className=''>Image: {fileName}</span>
-        <button type='submit' className='upload' disabled={!file}>Upload File</button>
+    <div className='fileUpload'>
+      <p>Upload Image:</p>
+      <form className='upload-form' onSubmit={handleSubmit}>
+        <div className="form-left">
+          {previewUrl && <img src={previewUrl} alt='Preview' className='preview-img' />}
+        </div>
+        <div className="form-right">
+          <span className='textArea'>Name: {fileName}</span>
+          <div className="form-right-btn">
+            <div className="form-input">
+              <input disabled={!account} type="file" id="file-upload" accept='image/*' name="data" onChange={retrieveFile} />
+              <label for="file-upload">Choose Image</label>
+            </div>
+            <button type='submit' className='upload-btn' disabled={!file}>Upload Image</button>
+          </div>
+        </div>
       </form>
     </div>
   )

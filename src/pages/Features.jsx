@@ -42,7 +42,7 @@ const Features = () => {
             <div className="features-details">
               <span className='features-details-top'>Share Securely.</span>
               <span className='features-details-bottom'>Privacy-centric DApps prioritize user
-                data control and employ secure, permission-based access mechanisms only with 
+                data control and employ secure, permission-based access mechanisms only with
                 approved users, to safeguarde and preserve privacy.
               </span>
             </div>

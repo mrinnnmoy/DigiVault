@@ -1,49 +1,45 @@
 import React, { useState } from 'react';
 
 const Display = ({ contract, account }) => {
-  const [data, setData] = useState("");
+  const [imageUrls, setImageUrls] = useState([]);
+  const [address, setAddress] = useState('');
+
   const getData = async () => {
-    let dataArray;
-    const Otheraddress = document.querySelector(".address").value;
     try {
-      if (Otheraddress) {
-        dataArray = await contract.display(Otheraddress);
-        // console.log(dataArray);
+      const addressToUse = address || account;
+      const dataArray = await contract.display(addressToUse);
+      if (dataArray && dataArray.length > 0) {
+        setImageUrls(dataArray);
       } else {
-        dataArray = await contract.display(account);
+        alert("No images to display.");
       }
     } catch (error) {
-      alert("Access Denied.");
-    }
-    const isEmpty = Object.keys(dataArray).length === 0;
-
-    if (!isEmpty) {
-      const str = dataArray.toString();
-      const str_array = str.split(",");
-
-      // console.log(str);
-      // console.log(str_array);
-
-      const images = str_array.map((item, i) => {
-        return (
-          <a href={item} key={i} target='_blank' rel='noreferrer'>
-            <img key={i} src={`https://gateway.pinata.cloud/ipfs/${item.substring(6)}`} alt="new" className='image-list' />
-          </a>
-        );
-      });
-      setData(images);
-    } else {
-      alert("No images to display.");
+      alert("Error fetching image data.");
     }
   };
 
+  const handleAddressChange = (e) => {
+    setAddress(e.target.value);
+  };
+
   return (
-    <>
-      <div className="">{data}</div>
-      <input type="text" placeholder='Enter Address' className='address' />
-      <button className="" onClick={getData}>Get Data</button>
-    </>
-  )
+    <div className="display">
+      <p>View Images:</p>
+      <div className="display-main">
+        <div className="display-img">
+          {imageUrls.map((imageUrl, index) => (
+            <a href={imageUrl} key={index} target="_blank" rel="noreferrer">
+              <img src={`https://gateway.pinata.cloud/ipfs/${imageUrl.substring(6)}`} alt={`${index + 1}`} className="image-list" />
+            </a>
+          ))}
+        </div>
+        <div className="display-body">
+          <input type="text" placeholder="Enter Address" value={address} onChange={handleAddressChange} className="address" />
+          <button className="get-btn" onClick={getData}>View</button>
+        </div>
+      </div>
+    </div>
+  );
 };
 
 export default Display;

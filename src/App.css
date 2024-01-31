@@ -511,3 +511,263 @@ footer {
 }
 
 /* Style CSS for Dashboard */
+.upload {
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    padding: 5rem 0;
+}
+
+.upload-table {
+    width: 70%;
+    border: 2px solid gray;
+    border-radius: 0 20px;
+    padding: 1.5rem;
+}
+
+.table-head {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: .25rem;
+}
+
+.table-head p {
+    font-size: 1.1rem;
+    height: 25px;
+    width: 550px;
+}
+
+.share {
+    border-radius: 10px;
+    width: 7.5rem;
+    height: 2rem;
+    background-color: #efefef;
+    color: #994ecc;
+    font-weight: 550;
+    margin: 1rem;
+}
+
+.share:hover {
+    cursor: pointer;
+    color: #efefef;
+    background: #994ecc;
+}
+
+.table-main {
+    display: flex;
+    flex-direction: column;
+}
+
+/* File-Upload */
+.fileUpload {
+    border: 2px solid #994ecc;
+    padding: .5rem;
+    height: 275px;
+    border-radius: 7.5px;
+}
+
+.upload-form {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.form-left {
+    display: flex;
+    justify-content: center;
+    width: 40%;
+}
+
+.form-left img {
+    width: 175px;
+    height: 175px;
+    border-radius: 5px;
+    border: 2px solid gray;
+    padding: .5rem;
+}
+
+.form-right {
+    display: flex;
+    flex-direction: column;
+    padding: .75rem;
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.form-right span {
+    font-weight: 500;
+    padding: .25rem;
+    display: flex;
+    justify-content: center;
+}
+
+.form-right-btn {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding: 2.5rem 0;
+}
+
+.form-input input[type="file"] {
+    display: none;
+
+}
+
+.form-input label {
+    display: flex;
+    justify-content: center;
+    border: 2px solid gray;
+    padding: .5rem .75rem;
+    border-radius: 10px;
+    color: #994ecc;
+    font-weight: 550;
+
+    &:hover {
+        cursor: pointer;
+        background-color: #994ecc;
+        color: white;
+    }
+}
+
+.form-right-btn .upload-btn {
+    border: 2px solid gray;
+    padding: .5rem .75rem;
+    border-radius: 10px;
+    color: white;
+    background-color: #994ecc;
+    font-weight: 550;
+
+    &:hover {
+        cursor: pointer;
+        background-color: white;
+        color: #994ecc;
+    }
+}
+
+/* Display Image */
+.display {
+    display: flex;
+    flex-direction: column;
+    border: 2px solid #994ecc;
+    border-radius: 5px;
+    margin-top: 1rem;
+    padding: .5rem;
+}
+
+.display-main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.display-img {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 1rem;
+    margin: .5rem;
+}
+
+.display-img img {
+    border: 2px solid gray;
+    border-radius: 5px;
+    margin: 0 .5rem;
+    padding: .2rem;
+    height: 30px;
+    width: 30px;
+}
+
+.display-body {
+    width: 350px;
+    height: 30px;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: .75rem;
+}
+
+.display-body input {
+    border: 2px solid gray;
+    border-radius: 5px;
+    width: 200px;
+}
+
+.display-body button {
+    border: 2px solid gray;
+    border-radius: 5px;
+    width: 100px;
+    color: white;
+    background: #994ecc;
+    font-weight: 500;
+
+    &:hover {
+        cursor: pointer;
+        color: #994ecc;
+        background: white;
+    }
+}
+
+/* Modal */
+.modalBg {
+    border: 2px solid gray;
+    border-radius: 5px;
+    padding: .5rem;
+    height: 175px;
+    margin-bottom: .75rem;
+}
+
+.modalBg p {
+    margin-bottom: .25rem;
+}
+
+.modal-body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.modal-head {
+    display: flex;
+    flex-direction: column;
+}
+
+.modal-head input {
+    border: 2px solid gray;
+    border-radius: 5px;
+    padding: .5rem;
+    margin-bottom: .5rem;
+}
+
+.modal-head select {
+    padding: .5rem;
+    border: 2px solid gray;
+    border-radius: 5px;
+    font-weight: 500;
+}
+
+.modal-footer {
+    margin-top: .5rem;
+    display: flex;
+    flex-direction: row;
+    width: 300px;
+    height: 35px;
+    justify-content: space-around;
+}
+
+.modal-footer button {
+    padding: .5rem;
+    font-weight: 500;
+    border: 2px solid gray;
+    border-radius: 10px;
+    color: white;
+    width: 75px;
+    background: #994ecc;
+
+    &:hover {
+        cursor: pointer;
+        background: white;
+        color: #994ecc;
+    }
+}

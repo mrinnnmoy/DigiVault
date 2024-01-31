@@ -22,33 +22,23 @@ const Modal = ({ setModalOpen, contract }) => {
     };
     contract && accessList();
   }, [contract]);
+
   return (
     <>
-      <div className="modalBackground">
-        <div className="modalContainer">
-          <div className="title">Share with</div>
-          <div className="body">
-            <input
-              type="text"
-              className="address"
-              placeholder="Enter Address"
-            ></input>
+      <div className="modalBg">
+        <p>Share:</p>
+        <div className="modal-body">
+          <div className="modal-head">
+            <input type="text" className="address" placeholder="Enter Address" />
+            <form id="myForm">
+              <select id="selectNumber">
+                <option className="address">People With Access</option>
+              </select>
+            </form>
           </div>
-          <form id="myForm">
-            <select id="selectNumber">
-              <option className="address">People With Access</option>
-            </select>
-          </form>
-          <div className="footer">
-            <button
-              onClick={() => {
-                setModalOpen(false);
-              }}
-              id="cancelBtn"
-            >
-              Cancel
-            </button>
+          <div className="modal-footer">
             <button onClick={() => sharing()}>Share</button>
+            <button onClick={() => { setModalOpen(false); }} id="cancelBtn" >Cancel</button>
           </div>
         </div>
       </div>
